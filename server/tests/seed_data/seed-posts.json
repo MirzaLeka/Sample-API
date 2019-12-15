@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "My First Post",
+        "description": "I have nothing important to describe"
+    },
+    {
+        "id": 2,
+        "title": "My Second Post",
+        "description": "Still Nothing"
+    },
+    {
+        "id": 3,
+        "title": "My Third Post",
+        "description": "Place soething smart here"
+    }
+]
