@@ -12,6 +12,7 @@ app.use(express.json());
 // Body Parser Forms
 app.use(express.urlencoded({ extended: true }));
 
+// Controllers
 app.use('/api/posts', require('./controllers/posts-controller')); 
 
 // Error page
