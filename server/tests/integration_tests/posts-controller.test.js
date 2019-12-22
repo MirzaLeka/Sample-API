@@ -75,5 +75,13 @@ describe('posts-controller', () => {
       .expect('Content-Type', /text/)
       expect(404);
   });
+
+  it('should retrieve a phone number', async() => {
+    const response = await request(app)
+      .get(`${endpoint}/phone/1`)
+      .expect('Content-Type', /json/)
+      .expect(200);
+    expect(typeof response.body).toEqual('object');
+  });
       
 });

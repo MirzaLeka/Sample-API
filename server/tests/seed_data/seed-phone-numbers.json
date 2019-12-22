@@ -1,0 +1,17 @@
+[
+    {
+        "isoCode": "+93",
+        "dialingCode": "+93",
+        "pattern": "/123/"
+    },
+    {
+        "isoCode": "+297",
+        "dialingCode": "+297",
+        "pattern": "/456/"
+    },
+    {
+        "isoCode": "+247",
+        "dialingCode": "+247",
+        "pattern": "/789/"
+    }
+]

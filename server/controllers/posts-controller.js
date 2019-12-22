@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { join } = require('path');
 const { fileUpload } = require('../services/file-upload');
 const postsData = require("../tests/seed_data/seed-posts.json");
+const phoneNumbersData = require("../tests/seed_data/seed-phone-numbers.json");
 
 
 // Create post
@@ -76,6 +77,27 @@ router.delete('/:id', (req, res) => {
     } catch (e) {
       res.status(400).send({ error: e.message });
     }
+});
+
+
+// Get Telephone numbers 
+router.get('/phone/:isoCode', (req, res) => {
+
+  const { isoCode } = req.params;
+  
+  try {
+    const post = phoneNumbersData.find(data => data.isoCode === isoCode);
+  
+    if (!post) {
+      return res.status(200).send(phoneNumbersData.find(data => data.isoCode === '+93'));
+    }
+  
+    res.status(200).json(post);
+    } catch (e) {
+      res.status(400).send({ error: e.message });
+    }
+
+
 });
 
 
